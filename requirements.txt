@@ -1,0 +1,31 @@
+# Mobile Factory API
+
+This is a FastAPI application for configuring and ordering customizable mobile phones.
+
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/mobile_factory.git
+    cd mobile_factory
+    ```
+
+2. Create a virtual environment and install dependencies:
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    pip install -r requirements.txt
+    ```
+
+3. Run the application:
+    ```sh
+    uvicorn main:app --reload
+    ```
+
+4. The application will be available at `http://127.0.0.1:8000`.
+
+## Usage
+
+Send a POST request to `/orders` with the components list:
+
+curl -X POST "http://127.0.0.1:8000/orders" -H "Content-Type: application/json" -d '{"components": ["I","A","D","F","K"]}'
